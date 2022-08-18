@@ -1,10 +1,9 @@
-name: Upload Website
-
+name: Upload Website to S3
 on: [push]
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v1
