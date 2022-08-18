@@ -3,7 +3,7 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v1
@@ -16,4 +16,4 @@ jobs:
         aws-region: us-east-2
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./ s3://etenlab-dot-com --delete
+      run: aws s3 sync ./ s3://etenlab.com --delete
