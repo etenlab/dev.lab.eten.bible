@@ -32,6 +32,7 @@
     .app-inner {
       flex-grow: 1;
       max-width: 1100px;
+      padding: 5px;
     }
 
     .title-wrap {
@@ -39,22 +40,21 @@
       justify-content: center;
     }
 
+    h3 {
+      font-style: italic;
+      color: cornflowerblue;
+    }
+
     .section {
       margin-left: 20px;
       margin-bottom: 30px;
-    }
-
-    .section-header {
-      font-style: italic;
-      color: cornflowerblue;
     }
 
     .content-header {
       color: lightcyan;
     }
 
-    ul,
-    .text-content {
+    h5 {
       color: lightcyan;
     }
 
@@ -68,6 +68,17 @@
 
     .single-line-header a {
       margin-left: 10px;
+    }
+
+    .tag-In-development {
+      margin-left: 10px;
+      color: pink;
+    }
+
+    .link-section a {
+      /* text-decoration: none; */
+      color: rgb(157, 179, 232);
+      font-size: large;
     }
   </style>
 </head>
@@ -85,64 +96,186 @@
       <p class="text-content-2">
         The Lab seeks to accelerate Bible translation through advancements in translation resources, quality assurance,
         artificial intelligence, and crowd sourcing. To facilitate collaboration and reduce rework, the lab is providing
-        a hosted environment for software projects and APIs. If you would like to contribute, submit a proposal, or use the APIs, please email admin@etenlab.com.
+        a hosted environment for software projects and APIs. If you would like to contribute in any way, request funding
+        for a
+        project, or use the APIs in your applications, please email admin@etenlab.com.
       </p>
 
       <div>
         <h3>Software Projects</h3>
         <div class="section">
-          <h4 class="section-header">Under Development</h4>
-
-          <div class="section">
-            <div class="single-line-header">
-              <h5 class="content-header">Reference Application 1</h5>
-              <a href="https://dev-ref.etenlab.com">link</a>
-            </div>
-            <ul>
-              <li>Simple showcase of all the APIs and components being developed. </li>
-            </ul>
-
+          <div class="single-line-header">
+            <h5 class="content-header">Showcase</h5>
+            <a href="https://dev-showcase.etenlab.com">link</a>
+            <span class="tag-In-development">In Development</span>
           </div>
-          <h4 class="section-header">In Production</h4>
-
-          <div class="section">
-            <p class="text-content">TBD</p>
-          </div>
+          <ul>
+            <li>Simple showcase of all the APIs and components being developed. </li>
+          </ul>
         </div>
       </div>
 
       <div>
-        <h3>Available APIs</h3>
+        <h3>Utility APIs</h3>
+
         <div class="section">
-          <h4 class="section-header">Development Environment</h4>
-
-          <div class="section">
-            <div class="single-line-header">
-              <h5 class="content-header">Authentication API</h5> <a
-                href="https://dev-api.etenlab.com:8202/swagger-ui/index.html">Docs</a>
-            </div>
-            <ul>
-              <li>User registration, login, logout endpoints. Uses JWTs.</li>
-            </ul>
+          <div class="single-line-header">
+            <h5 class="content-header">Authentication</h5>
+            <a href="https://dev-api.etenlab.com:8202/swagger-ui/index.html">docs</a>
+            <span class="tag-In-development">In Development</span>
           </div>
-
-          <div class="section">
-            <div class="single-line-header">
-              <h5 class="content-header">ISO 639-2 API</h5>
-              <a href="https://dev-api.etenlab.com:8302/swagger-ui/index.html">Docs</a>
-            </div>
-            <ul>
-              <li>Searching the ISO 639-2 database in various ways.</li>
-              <li>Useful for when an application needs to convert between language identifiers and names.</li>
-            </ul>
-          </div>
+          <ul>
+            <li>User registration, login, logout, password reset</li>
+            <li>Uses JWTs to verify identity</li>
+            <li>Login by email or cell</li>
+            <li>optional MFA</li>
+            <li>Enables applications to share a common user base</li>
+          </ul>
         </div>
 
         <div class="section">
-          <h4 class="section-header">Production Environment</h4>
-          <div class="section">
-            <p class="text-content">TBD</p>
+          <div class="single-line-header">
+            <h5 class="content-header">User</h5>
+            <span class="tag-In-development">In Development</span>
           </div>
+          <ul>
+            <li>User's self service for management of their profile</li>
+            <li>Profile image and other attributes</li>
+            <li>Privacy settings</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Authorization</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Validate a user's access to data</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Organization</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Management for organization registration</li>
+            <li>Authorization for an org's admins</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Discussion</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Allows application developers to add a discussion box on any content</li>
+            <li>Enables users to discuss and share resources</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">File</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Allows users and applications the ability to upload files</li>
+            <li>Enables access control on each file per organization</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Site Text</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Provides user interface text in all languages available</li>
+            <li>Can be used by applications to make interfaces available in any language</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Vote</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Allows users to vote on any content</li>
+            <li>Can be used for any voting concept an app may need</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Site Text Translation</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Used by translators to translate site text interface text from one language to another</li>
+            <li>Applications that implement the site text, vote, and site text translation APIs can crowd source the
+              translation of their application's interface into any language that has an available translator</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">Translation</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Generic translation service for translators to translate content from one language to another</li>
+            <li>Can enable target languages to become a source language</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div>
+        <h3>Dataset APIs</h3>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">ISO 639-2</h5>
+            <a href="https://dev-api.etenlab.com:8302/swagger-ui/index.html">docs</a>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Searching the ISO 639-2 database in various ways.</li>
+            <li>Useful for when an application needs to convert between language identifiers and names.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">ISO 639-3</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Searching the ISO 639-3 database in various ways.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="single-line-header">
+            <h5 class="content-header">ISO 639-5</h5>
+            <span class="tag-In-development">In Development</span>
+          </div>
+          <ul>
+            <li>Searching the ISO 639-5 database in various ways.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <div class="section link-section">
+          <a href="https://github.com/etenlab">GitHub: ETEN Innovation Lab</a>
         </div>
       </div>
 
